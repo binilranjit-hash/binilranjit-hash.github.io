@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binil's Home Tuition</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background: rgba(0,0,0,0.8);
+    }
+    .navbar a {
+      color: white !important;
+      font-weight: 500;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top:0;left:0;right:0;bottom:0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    .section-title {
+      margin: 60px 0 30px;
+      text-align: center;
+    }
+    .card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .testimonial {
+      background: #f8f9fa;
+      padding: 50px 0;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    footer {
+      background: #212529;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#">Binil Tuition</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Personalized Learning for Every Student</h1>
+      <p class="lead">Helping you achieve academic success through tailored home tuition</p>
+      <a href="#contact" class="btn btn-primary btn-lg mt-3">Book a Free Demo</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>I am <strong>Binil Ranjit</strong>, a dedicated tutor with a passion for teaching. I specialize in making learning simple, effective, and enjoyable for students of all levels.</p>
+    </div>
+  </section>
+
+  <!-- Subjects -->
+  <section id="subjects" class="container">
+    <div class="section-title">
+      <h2>Subjects I Teach</h2>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Math">
+          <div class="card-body">
+            <h5 class="card-title">Mathematics</h5>
+            <p class="card-text">Step-by-step explanations and problem-solving skills for confident learning.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="English">
+          <div class="card-body">
+            <h5 class="card-title">English</h5>
+            <p class="card-text">Enhance grammar, vocabulary, and communication skills effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Science">
+          <div class="card-body">
+            <h5 class="card-title">Science</h5>
+            <p class="card-text">Learn concepts through practical examples and real-life applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonial">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Students Say</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <p>"Sir explains math in such a simple way. I finally started enjoying the subject!"</p>
+          <h6>- Student A</h6>
+        </div>
+        <div class="col-md-4 text-center">
+          <p>"My English improved a lot after joining these classes. I feel more confident now."</p>
+          <h6>- Student B</h6>
+        </div>
+        <div class="col-md-4 text-center">
+          <p>"Science is no longer difficult. Thank you for the practical approach to learning!"</p>
+          <h6>- Student C</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+      <p>Get in touch for personalized home tuition and demo classes.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p><strong>Phone:</strong> +977-9800000000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Binil's Home Tuition | Designed with ❤️</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

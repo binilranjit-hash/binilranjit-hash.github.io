@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,92 +10,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome for social icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- Custom CSS -->
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .navbar {
-      background: rgba(0,0,0,0.8);
-    }
-    .navbar a {
-      color: white !important;
-      font-weight: 500;
-    }
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .navbar { background: rgba(0,0,0,0.85); }
+    .navbar a { color: white !important; font-weight: 500; }
     .hero {
-      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      height: 100vh;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
+      background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white; position: relative;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top:0;left:0;right:0;bottom:0;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 600;
-    }
-    .section-title {
-      margin: 60px 0 30px;
-      text-align: center;
-    }
-    .card img {
-      height: 220px;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-    .card:hover img {
-      transform: scale(1.05);
-    }
-    .teacher-section {
-      padding: 50px 0;
-    }
-    .teacher-card img {
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .teacher-card:hover img {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.5rem;
-      transition: transform 0.3s, color 0.3s;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-      color: #0d6efd;
-    }
-    .testimonial {
-      background: #f8f9fa;
-      padding: 50px 0;
-    }
-    .testimonial p {
-      font-style: italic;
-    }
-    footer {
-      background: #212529;
-      color: #bbb;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+    .hero::after { content:""; position:absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); }
+    .hero-content { position: relative; z-index: 1; max-width: 900px; }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    .btn-primary { background: linear-gradient(45deg, #007bff, #00d4ff); border:none; transition: transform 0.3s; }
+    .btn-primary:hover { transform: scale(1.05); }
+    .section-title { text-align:center; margin:60px 0 40px; }
+    .card img { height: 220px; object-fit: cover; transition: transform 0.3s; border-radius: 10px; }
+    .card:hover img { transform: scale(1.05); }
+    .teacher-card img { height: 180px; width:180px; object-fit: cover; border-radius:50%; transition: transform 0.3s, box-shadow 0.3s; }
+    .teacher-card:hover img { transform: scale(1.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+    .teacher-card { padding:20px; transition: transform 0.3s; }
+    .teacher-card:hover { transform: translateY(-5px); }
+    .social-icons a { margin:0 10px; color:white; font-size:1.5rem; transition: transform 0.3s, color 0.3s; }
+    .social-icons a:hover { transform: scale(1.2); color:#0d6efd; }
+    .testimonial { background:#f8f9fa; padding:50px 0; }
+    .testimonial p { font-style: italic; }
+    footer { background:#212529; color:#bbb; text-align:center; padding:20px; margin-top:40px; }
   </style>
 </head>
 <body>
@@ -104,7 +44,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-white" href="#">S.B.R Square</a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -122,9 +62,15 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Personalized Learning for Every Student</h1>
-      <p class="lead">Helping you achieve academic success through tailored home tuition</p>
-      <a href="#contact" class="btn btn-primary btn-lg mt-3">Book a Free Demo</a>
+      <h1>विद्यालय र कोचिंग क्लासले तपाईंलाई निराश बनाएको छ?</h1>
+      <p>चिन्ता नगर्नुहोस्! हामी १००% पास रिजल्टको ग्यारेन्टी दिन्छौं, नभए तपाईंको पैसा फिर्ता!</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Book Free Demo</a>
+      <div class="social-icons mt-4">
+        <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/@a_and_b_tunes" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/qr/6CHHPRVZG5XZL1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
     </div>
   </section>
 
@@ -138,34 +84,32 @@
 
   <!-- Subjects -->
   <section id="subjects" class="container">
-    <div class="section-title">
-      <h2>Subjects We Teach</h2>
-    </div>
+    <div class="section-title"><h2>Subjects We Teach</h2></div>
     <div class="row text-center">
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Math">
+          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" alt="Mathematics">
           <div class="card-body">
             <h5 class="card-title">Mathematics</h5>
-            <p class="card-text">Step-by-step explanations and problem-solving skills for confident learning.</p>
+            <p>Step-by-step explanations for confident learning.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Science">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="Science">
           <div class="card-body">
             <h5 class="card-title">Science & Statistics</h5>
-            <p class="card-text">Understand concepts clearly through examples and practical applications.</p>
+            <p>Concepts through practical examples and real-life applications.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="English">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Languages">
           <div class="card-body">
             <h5 class="card-title">Languages</h5>
-            <p class="card-text">English, Japanese, Nepali, and more, focusing on fluency and comprehension.</p>
+            <p>English, Japanese, Nepali, and more, focusing on fluency and comprehension.</p>
           </div>
         </div>
       </div>
@@ -173,76 +117,78 @@
   </section>
 
   <!-- Teachers Section -->
-  <section id="teachers" class="teacher-section container">
-    <div class="section-title">
-      <h2>Our Teachers</h2>
-      <p>Meet our experienced tutors</p>
-    </div>
+  <section id="teachers" class="container">
+    <div class="section-title"><h2>Our Teachers</h2><p>Meet our experienced tutors</p></div>
     <div class="row text-center">
-      <!-- Teacher cards -->
-      <!-- Binil Ranjit -->
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
+      <!-- Add all 27 teachers below using same format -->
+      <!-- Example teacher -->
+      <div class="col-md-3 mb-4">
+        <div class="teacher-card shadow-sm">
           <img src="https://graph.facebook.com/1K36cWq8M9/picture?type=large" alt="Binil Ranjit">
           <h5 class="mt-3">Binil Ranjit</h5>
           <p>Mathematics, Account, Finance (10 to Masters)</p>
         </div>
       </div>
-      <!-- Other teachers (using placeholder images) -->
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
+      <div class="col-md-3 mb-4">
+        <div class="teacher-card shadow-sm">
           <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c8da3?auto=format&fit=crop&w=400&q=80" alt="Deepak Khanal">
           <h5 class="mt-3">Deepak Khanal</h5>
           <p>Mathematics (10 to Masters)</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
+      <div class="col-md-3 mb-4">
+        <div class="teacher-card shadow-sm">
           <img src="https://images.unsplash.com/photo-1590080877073-90b4d707a3ff?auto=format&fit=crop&w=400&q=80" alt="Maheshwor Nepal">
           <h5 class="mt-3">Maheshwor Nepal</h5>
           <p>Mathematics (10 to Masters)</p>
         </div>
       </div>
-      <!-- Continue adding all teachers like above -->
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
+      <div class="col-md-3 mb-4">
+        <div class="teacher-card shadow-sm">
           <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=400&q=80" alt="Pramod Ghimire">
           <h5 class="mt-3">Pramod Ghimire</h5>
-          <p>Science, Statistics (10 to Masters)</p>
+          <p>Science & Statistics (10 to Masters)</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
-          <img src="https://images.unsplash.com/photo-1614286439676-8fc6e9b90f80?auto=format&fit=crop&w=400&q=80" alt="Sagar Chapagain">
-          <h5 class="mt-3">Sagar Chapagain</h5>
-          <p>Physics (10 to Masters)</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="teacher-card">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" alt="Saurav Adhikari">
-          <h5 class="mt-3">Saurav Adhikari</h5>
-          <p>Chemistry (10 to Masters)</p>
-        </div>
-      </div>
-      <!-- Add remaining teachers in similar fashion -->
+      <!-- Repeat the above structure for remaining teachers -->
     </div>
   </section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="testimonial">
     <div class="container">
-      <div class="section-title">
-        <h2>What Students Say</h2>
-      </div>
+      <div class="section-title"><h2>What Students Say</h2></div>
       <div class="row">
-        <div class="col-md-4 text-center">
-          <p>"Sir explains math in such a simple way. I finally started enjoying the subject!"</p>
-          <h6>- Student A</h6>
+        <div class="col-md-4 text-center"><p>"Sir explains math in such a simple way. I finally started enjoying the subject!"</p><h6>- Student A</h6></div>
+        <div class="col-md-4 text-center"><p>"My English improved a lot after joining these classes. I feel more confident now."</p><h6>- Student B</h6></div>
+        <div class="col-md-4 text-center"><p>"Science is no longer difficult. Thank you for the practical approach to learning!"</p><h6>- Student C</h6></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <div class="section-title"><h2>Contact Me</h2><p>Get in touch for personalized home tuition and demo classes.</p></div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <p><strong>Email:</strong> <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a></p>
+        <p><strong>Phone:</strong> +977-9704643826</p>
+        <div class="social-icons mt-3">
+          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://youtube.com/@a_and_b_tunes" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/qr/6CHHPRVZG5XZL1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
-        <div class="col-md-4 text-center">
-          <p>"My English improved a lot after joining these classes. I feel more confident now."</p>
-          <h6>- Student B</h6>
-        </div>
-        <div class="col-md-4 text-center">
-          <p
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 S.B.R Square | Designed with ❤️ by Binil Ranjit</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

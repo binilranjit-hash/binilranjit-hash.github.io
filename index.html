@@ -62,19 +62,24 @@
     }
     .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,.12);color:#fff;padding:.55rem .9rem;border-radius:.6rem}
 
-    /* Layout: left column (featured list) + right column (main blocks) */
+    /* Layout */
     .main-grid{display:grid;grid-template-columns:320px 1fr;gap:28px;padding:28px 1rem;max-width:1200px;margin:0 auto}
-    @media (max-width:992px){ .main-grid{grid-template-columns:1fr; padding:18px} .hero{padding:2rem 0} .hero h1{font-size:1.6rem} }
+    @media (max-width:992px){
+      .main-grid{grid-template-columns:1fr; padding:18px}
+      .featured-list{position:static !important} /* fix overlap */
+      .hero{padding:2rem 0}
+      .hero h1{font-size:1.6rem}
+    }
 
-    /* Featured list (left) */
-    .featured-list{position:sticky;top:86px}
+    /* Featured list */
+    .featured-list{position:sticky;top:86px;align-self:start}
     .featured-item{display:flex;gap:.9rem;padding:.6rem;border-radius:.6rem;align-items:center;background:#fff;border:1px solid #efefef}
     .featured-thumb{width:88px;height:60px;flex-shrink:0;overflow:hidden;border-radius:.4rem}
     .featured-thumb img{width:100%;height:100%;object-fit:cover}
     .featured-meta h6{margin:0;font-size:.98rem}
     .featured-meta p{margin:2px 0 0;font-size:.82rem;color:var(--muted)}
 
-    /* Cards/grid in right column */
+    /* Cards/grid */
     .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
     .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     @media (max-width:992px){ .cards-grid{grid-template-columns:repeat(2,1fr)} }
@@ -84,7 +89,7 @@
     .resource-card img{width:100%;height:160px;object-fit:cover}
     .resource-card .body{padding:12px}
 
-    /* Teachers preview */
+    /* Teachers */
     .teachers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
     .teacher{background:#fff;padding:14px;border-radius:12px;text-align:center;border:1px solid #f0f0f0}
     .teacher img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:6px solid #fff;margin-top:-50px;box-shadow:0 8px 20px rgba(11,30,63,.08)}
@@ -122,7 +127,6 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -139,9 +143,8 @@
   <!-- HERO -->
   <header class="hero" role="banner">
     <div class="box container">
-      <h1>विद्यालय र कोचिंग क्लासले तपाईंलाई निराश बनाएको छ? <br>चिन्ता नगर्नुहोस् — हामी <strong>१००% पास</strong> ग्यारेन्टी गर्छौं, नभए तपाईंको पैसा फिर्ता।</h1>
+      <h1>विद्यालय र कोचिंग क्लासले तपाईंलाई निराश बनाएको छ?<br>चिन्ता नगर्नुहोस् — हामी <strong>१००% पास</strong> ग्यारेन्टी गर्छौं, नभए तपाईंको पैसा फिर्ता।</h1>
       <p class="lead">S.B.R Square: अनुभवी शिक्षकहरूद्वारा व्यक्तिगत शिक्षण — बोर्ड परीक्षा, स्नातक तयारी र अडिटोरियम सफलताको लागि तयार ।</p>
-
       <div class="cta">
         <a href="contact.html" class="btn-cta btn">नि:शुल्क डेमो बुक गर्नुहोस्</a>
         <a href="teachers.html" class="btn-ghost btn">हाम्रा शिक्षकहरू हेर्नुहोस्</a>
@@ -153,218 +156,85 @@
   <main class="py-4">
     <div class="main-grid">
 
-      <!-- LEFT: Featured list (like video/resource list in screenshot) -->
+      <!-- LEFT -->
       <aside class="featured-list">
         <div class="mb-3 small text-uppercase text-muted">Featured Lessons</div>
-
-        <!-- Featured items (stacked) -->
         <div class="d-flex flex-column gap-3">
+          <!-- Sample lessons -->
           <a class="featured-item shadow-soft" href="videos.html">
-            <div class="featured-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1524492412937-4961f1c3d7f7?auto=format&fit=crop&w=800&q=80" alt="lesson 1"></div>
+            <div class="featured-thumb"><img src="https://images.unsplash.com/photo-1524492412937-4961f1c3d7f7?auto=format&fit=crop&w=800&q=80" alt="lesson 1"></div>
             <div class="featured-meta">
               <h6>Linear Algebra — Short Tricks</h6>
               <p class="muted">15 min • Mathematics</p>
             </div>
           </a>
-
           <a class="featured-item shadow-soft" href="videos.html">
-            <div class="featured-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="lesson 2"></div>
+            <div class="featured-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="lesson 2"></div>
             <div class="featured-meta">
               <h6>Physics: Motion & Forces</h6>
               <p class="muted">22 min • Physics</p>
             </div>
           </a>
-
-          <a class="featured-item shadow-soft" href="library.html">
-            <div class="featured-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1581091012184-7f6d0f3b1d3d?auto=format&fit=crop&w=800&q=80" alt="notes"></div>
-            <div class="featured-meta">
-              <h6>Board Exam Quick Notes</h6>
-              <p class="muted">Downloadable PDF • Math / Science</p>
-            </div>
-          </a>
-
-          <a class="featured-item shadow-soft" href="videos.html">
-            <div class="featured-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=800&q=80" alt="lesson 4"></div>
-            <div class="featured-meta">
-              <h6>English Writing Tips</h6>
-              <p class="muted">12 min • English</p>
-            </div>
-          </a>
-
-          <!-- more items -->
-          <a class="featured-item shadow-soft" href="videos.html">
-            <div class="featured-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=80" alt="lesson 5"></div>
-            <div class="featured-meta">
-              <h6>Statistics: Common Mistakes</h6>
-              <p class="muted">18 min • Statistics</p>
-            </div>
-          </a>
         </div>
-
         <div class="mt-4 text-center">
           <a href="videos.html" class="small">View all lessons →</a>
         </div>
       </aside>
 
-      <!-- RIGHT: main content -->
+      <!-- RIGHT -->
       <section>
-
-        <!-- Featured video / resource -->
+        <!-- Featured video -->
         <div class="mb-4">
           <div class="section-title">
             <h4 class="mb-0">Featured Lesson</h4>
             <a href="videos.html" class="small muted">See more</a>
           </div>
-
           <div class="row g-3">
             <div class="col-lg-7">
               <div class="resource-card shadow-sm">
                 <div style="position:relative;padding-top:56.25%;">
-                  <!-- placeholder iframe; add your video id later -->
-                  <iframe loading="lazy" src="https://www.youtube.com/embed/?rel=0" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen title="Featured lesson"></iframe>
+                  <iframe src="https://www.youtube.com/embed/?rel=0" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
                 </div>
                 <div class="body">
-                  <h5 style="margin:.2rem 0">Solve Hard Math Problems — Quick Methods</h5>
+                  <h5>Solve Hard Math Problems — Quick Methods</h5>
                   <p class="muted small mb-0">Instructor: Binil Ranjit • 20 min</p>
                 </div>
               </div>
             </div>
-
             <div class="col-lg-5">
               <div class="cards-grid">
                 <div class="resource-card shadow-sm">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1581092580496-1e2c9e9b3a9b?auto=format&fit=crop&w=800&q=80" alt="resource">
-                  <div class="body">
-                    <h6 class="mb-1">Exam Tips PDF</h6>
-                    <p class="muted small mb-0">Quick checklist for board exams</p>
-                  </div>
+                  <img src="https://images.unsplash.com/photo-1581092580496-1e2c9e9b3a9b?auto=format&fit=crop&w=800&q=80" alt="resource">
+                  <div class="body"><h6>Exam Tips PDF</h6><p class="muted small mb-0">Quick checklist for board exams</p></div>
                 </div>
-
                 <div class="resource-card shadow-sm">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=80" alt="resource2">
-                  <div class="body">
-                    <h6 class="mb-1">Physics Shortcuts</h6>
-                    <p class="muted small mb-0">Time-saving problem strategies</p>
-                  </div>
+                  <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=80" alt="resource2">
+                  <div class="body"><h6>Physics Shortcuts</h6><p class="muted small mb-0">Time-saving problem strategies</p></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Subjects -->
-        <div class="mb-4">
-          <div class="section-title">
-            <h4 class="mb-0">Popular Subjects</h4>
-            <a href="library.html" class="small muted">Browse resources</a>
-          </div>
-
-          <div class="row g-3">
-            <div class="col-md-4">
-              <div class="card resource-card shadow-sm">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" alt="Math">
-                <div class="body text-center">
-                  <h6>Mathematics</h6>
-                  <p class="muted small">Problem solving • Board prep</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card resource-card shadow-sm">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="Science">
-                <div class="body text-center">
-                  <h6>Science</h6>
-                  <p class="muted small">Concepts, experiments & examples</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card resource-card shadow-sm">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Languages">
-                <div class="body text-center">
-                  <h6>Languages</h6>
-                  <p class="muted small">English • Japanese • Nepali</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Teachers preview -->
+        <!-- Teachers -->
         <div class="mb-4">
           <div class="section-title">
             <h4 class="mb-0">Our Teachers</h4>
             <a href="teachers.html" class="small muted">View all tutors</a>
           </div>
-
           <div class="teachers-grid">
-            <!-- Show a selection (images lazy-loaded). Use your FB picture for Binil -->
             <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://graph.facebook.com/1K36cWq8M9/picture?type=large" alt="Binil Ranjit">
+              <img src="https://graph.facebook.com/1K36cWq8M9/picture?type=large" alt="Binil Ranjit">
               <h6>Binil Ranjit</h6>
               <p class="muted small">Mathematics • Accounts • Finance</p>
             </div>
-
-            <!-- placeholders -->
             <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=600&q=80" alt="teacher">
+              <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=600&q=80" alt="Deepak">
               <h6>Deepak Khanal</h6>
               <p class="muted small">Mathematics</p>
             </div>
-
-            <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=80" alt="teacher">
-              <h6>Maheshwor Nepal</h6>
-              <p class="muted small">Mathematics</p>
-            </div>
-
-            <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="teacher">
-              <h6>Pramod Ghimire</h6>
-              <p class="muted small">Science • Statistics</p>
-            </div>
-
-            <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=600&q=80" alt="teacher">
-              <h6>Sagar Chapagain</h6>
-              <p class="muted small">Physics</p>
-            </div>
-
-            <div class="teacher shadow-sm">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1603415526960-f8f5e0f29e2a?auto=format&fit=crop&w=600&q=80" alt="teacher">
-              <h6>Saurav Adhikari</h6>
-              <p class="muted small">Chemistry</p>
-            </div>
-
-            <!-- NOTE: the Teachers page has full list of all tutors -->
           </div>
         </div>
-
-        <!-- Testimonials & Why choose us -->
-        <div class="mb-4">
-          <div class="section-title">
-            <h4 class="mb-0">Why Students Choose Us</h4>
-            <a href="about.html" class="small muted">Our mission</a>
-          </div>
-
-          <div class="row g-3">
-            <div class="col-md-6">
-              <div class="testi shadow-sm p-3">
-                <p>"I improved my math scores from 45% to 85% in 3 months. The teaching method is amazing!"</p>
-                <div class="mt-2 small muted">— Student A</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="testi shadow-sm p-3">
-                <p>"Clear lessons and personal attention. The teachers are extremely supportive."</p>
-                <div class="mt-2 small muted">— Student B</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </section>
     </div>
   </main>
@@ -372,35 +242,21 @@
   <!-- FOOTER -->
   <footer>
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div>
-        <strong>S.B.R Square</strong><br>
-        <div class="small muted">Personalized home tuition — class 10 to Masters</div>
-      </div>
-
+      <div><strong>S.B.R Square</strong><br><div class="small muted">Personalized home tuition — class 10 to Masters</div></div>
       <div class="text-center mt-3 mt-md-0">
         <div class="small">Email: <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a> • Phone: +977-9704643826</div>
         <div class="socials mt-2">
-          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="https://youtube.com/@a_and_b_tunes" target="_blank" aria-label="YouTube" class="ms-2"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/qr/6CHHPRVZG5XZL1" target="_blank" aria-label="WhatsApp" class="ms-2"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok" class="ms-2"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://youtube.com/@a_and_b_tunes" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/qr/6CHHPRVZG5XZL1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
-
-      <div class="mt-3 mt-md-0 small text-end muted">
-        © <span id="yr"></span> S.B.R Square • Designed by Binil Ranjit
-      </div>
+      <div class="mt-3 mt-md-0 small text-end muted">© <span id="yr"></span> S.B.R Square • Designed by Binil Ranjit</div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    // small accessibility: add keyboard focus visible for featured items
-    document.querySelectorAll('.featured-item').forEach(el=>{
-      el.setAttribute('tabindex','0');
-    });
-  </script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

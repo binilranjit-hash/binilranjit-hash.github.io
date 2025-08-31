@@ -1,28 +1,99 @@
-<div class="row justify-content-center">
-  <!-- Contact Info -->
-  <div class="col-md-6 mb-4 text-center">
-    <p><strong>Binil Ranjit:</strong> +977-9704643826</p>
-    <p><strong>Email:</strong> <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a></p>
-    <p><strong>Pramod Ghimire:</strong> +977-9851072574</p>
-    <p><strong>Address:</strong> Kathmandu, Nepal</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #333;
+    }
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0077b6;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button {
+      padding: 0.8rem;
+      background: #0077b6;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005f87;
+    }
+    .info {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .info a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Get in Touch</h2>
+  </header>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>If you’d like to connect, collaborate, or just say hello, please fill out the form below.</p>
+
+    <form action="mailto:binilrabjit@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <p>Or you can reach me directly at:</p>
+      <p><a href="mailto:binilrabjit@gmail.com">binilrabjit@gmail.com</a></p>
+    </div>
   </div>
 
-  <!-- Contact Form -->
-  <div class="col-md-6">
-    <form>
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Your Name">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Your Email">
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-  </div>
-</div>
+</body>
+</html>

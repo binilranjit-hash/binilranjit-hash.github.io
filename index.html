@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S.B.R Square - Home Tuition</title>
+  <title>S.B.R Square - Personalized Home Tuition</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,22 +18,25 @@
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
     .navbar { background: rgba(0,0,0,0.85); }
     .navbar a { color: white !important; font-weight: 500; }
-    .hero { background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; height: 100vh; color: white; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; }
-    .hero::after { content: ""; position: absolute; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.6); }
+    .hero { 
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') 
+      no-repeat center center/cover; 
+      height: 100vh; 
+      display: flex; justify-content: center; align-items: center; 
+      text-align: center; color: white; position: relative; 
+    }
+    .hero::after { content: ""; position: absolute; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.5); }
     .hero-content { position: relative; z-index: 1; }
-    .hero h1 { font-size: 2.5rem; font-weight: 700; }
-    .hero p { font-size: 1.3rem; margin-top: 15px; }
-    .btn-hero { margin-top: 20px; font-size: 1.1rem; }
-
+    .hero h1 { font-size: 2.5rem; font-weight: 600; line-height: 1.4; }
+    .btn-primary { transition: transform 0.3s; }
+    .btn-primary:hover { transform: scale(1.05); }
     .section-title { margin: 60px 0 30px; text-align: center; }
-    .card:hover { transform: translateY(-10px); transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    .social-icons a:hover { color: #0d6efd; transform: scale(1.2); transition: 0.3s; }
-
+    .card { transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.3); }
+    .card img { height: 220px; object-fit: cover; border-radius: 8px; }
     footer { background: #212529; color: #bbb; text-align: center; padding: 20px; margin-top: 40px; }
-
-    .teacher-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
-    .teacher-card h5 { margin-top: 10px; font-weight: 600; }
-    .teacher-card p { font-size: 0.9rem; color: #555; }
+    .social-icons a { color: #bbb; margin: 0 10px; transition: 0.3s; }
+    .social-icons a:hover { color: #0d6efd; transform: scale(1.2); }
   </style>
 </head>
 <body>
@@ -47,7 +50,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
           <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li>
@@ -58,93 +61,93 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content container">
-      <h1>स्कूल र कोचिंग कक्षाबाट निराश हुनुहुन्छ?</h1>
-      <p>चिन्ता नगर्नुहोस्! हामी १००% पास नतिजा ग्यारेन्टी गर्छौं। नभए पैसा फिर्ता!</p>
-      <a href="contact.html" class="btn btn-primary btn-lg btn-hero">नि:शुल्क डेमो बुक गर्नुहोस्</a>
+    <div class="hero-content">
+      <h1>स्कूल र कोचिंग क्लासबाट झनै निराश हुनु भएको छ?<br>चिन्ता नगर्नुहोस्, हामी **100% पास रिजल्ट** ग्यारेन्टी गर्छौं, नत्र तपाईंको पैसा फिर्ता!</h1>
+      <a href="contact.html" class="btn btn-primary btn-lg mt-3">Book a Free Demo</a>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="container">
     <div class="section-title">
-      <h2>हाम्रो बारेमा</h2>
-      <p>S.B.R Square मा हामी प्रत्येक विद्यार्थीको लागि व्यक्तिगत शिक्षण प्रदान गर्छौं। हाम्रो उद्देश्य शिक्षालाई सरल, प्रभावकारी र रमाइलो बनाउनु हो।</p>
+      <h2>About S.B.R Square</h2>
+      <p>We provide personalized home tuition from class 10 to Masters. Our expert teachers focus on clarity, practical learning, and guaranteed results.</p>
     </div>
   </section>
 
-  <!-- Teachers -->
-  <section id="teachers" class="container">
+  <!-- Subjects Section -->
+  <section id="subjects" class="container">
     <div class="section-title">
-      <h2>हाम्रो शिक्षक टोली</h2>
+      <h2>Subjects We Teach</h2>
+    </div>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" alt="Mathematics">
+          <div class="card-body">
+            <h5>Mathematics</h5>
+            <p>Step-by-step explanations and problem-solving skills for confident learning.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="English">
+          <div class="card-body">
+            <h5>English</h5>
+            <p>Enhance grammar, vocabulary, and communication skills effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Science">
+          <div class="card-body">
+            <h5>Science</h5>
+            <p>Learn concepts through practical examples and real-life applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Preview Section -->
+  <section id="teachers-preview" class="container mt-5">
+    <div class="section-title">
+      <h2>Meet Our Teachers</h2>
+      <p>Our expert team ensures students achieve their best.</p>
     </div>
     <div class="row g-4">
-      <!-- Teacher Cards -->
       <div class="col-md-4">
         <div class="card teacher-card shadow-sm">
           <img src="https://www.facebook.com/share/1K36cWq8M9/" alt="Binil Ranjit">
           <div class="card-body text-center">
             <h5>Binil Ranjit</h5>
-            <p>Mathematics, Account, Finance (10 to Masters)</p>
+            <p>Mathematics, Accounts, Finance (10 to Masters)</p>
           </div>
         </div>
       </div>
-
-      <!-- Placeholder images for other 26 teachers -->
-      <div class="col-md-4">
-        <div class="card teacher-card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Deepak Khanal">
-          <div class="card-body text-center">
-            <h5>Deepak Khanal</h5>
-            <p>Mathematics (10 to Masters)</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card teacher-card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1531256379411-2f0d05a39c88?auto=format&fit=crop&w=800&q=80" alt="Maheshwor Nepal">
-          <div class="card-body text-center">
-            <h5>Maheshwor Nepal</h5>
-            <p>Mathematics (10 to Masters)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Repeat similar cards for remaining teachers (Pramod Ghimire, Sagar Chapagain, etc.) -->
-      <!-- You can copy the above structure 23 more times, replacing name, subjects, and placeholder image -->
-
+      <!-- Add few more featured teachers here -->
+    </div>
+    <div class="text-center mt-3">
+      <a href="teachers.html" class="btn btn-primary">View All Teachers</a>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container">
+  <!-- Contact Info Section -->
+  <section id="contact" class="container mt-5 mb-5">
     <div class="section-title">
-      <h2>संपर्क गर्नुहोस्</h2>
-      <p>नि:शुल्क डेमो क्लासको लागि सम्पर्क गर्नुहोस्।</p>
+      <h2>Contact Us</h2>
+      <p>Reach out for personalized tuition and demo classes.</p>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-md-6 text-center">
-        <p><strong>फोन:</strong> +977-9704643826</p>
-        <p><strong>ईमेल:</strong> <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a></p>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <p><strong>Email:</strong> <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a></p>
+        <p><strong>Phone:</strong> +977-9704643826</p>
+        <p><strong>Promod Ghimire:</strong> 9851072574</p>
         <div class="social-icons mt-3">
-          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://youtube.com/@a_and_b_tunes" target="_blank" class="me-3"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="https://wa.me/qr/6CHHPRVZG5XZL1" target="_blank" class="me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
-          <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok fa-2x"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 S.B.R Square | Designed with ❤️ by Binil Ranjit</p>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://youtube.com/@a_and_b_tunes" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="https://wa.me/qr/6CHHPR

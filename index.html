@@ -3,151 +3,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S.B.R Square - Personalized Home Tuition</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
+  <title>S.B.R Square - Home Tuition & Educational Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    .navbar { background: rgba(0,0,0,0.85); }
-    .navbar a { color: white !important; font-weight: 500; }
-    .hero { 
-      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') 
-      no-repeat center center/cover; 
-      height: 100vh; 
-      display: flex; justify-content: center; align-items: center; 
-      text-align: center; color: white; position: relative; 
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    header { position: fixed; top: 0; width: 100%; background: #fff; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+    nav .logo { font-weight: 700; font-size: 24px; color: #2c3e50; }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav ul li { padding: 5px 0; }
+    nav ul li a:hover { color: #3498db; transition: 0.3s; }
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .hamburger div { width: 25px; height: 3px; background: #333; }
+
+    /* Hero Section */
+    .hero { height: 100vh; background: url('https://source.unsplash.com/1600x900/?education,books') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: #fff; flex-direction: column; padding: 0 20px; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .hero p { font-size: 20px; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+    .hero button { background: #3498db; color: #fff; border: none; padding: 12px 25px; font-size: 16px; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+    .hero button:hover { background: #2980b9; }
+
+    /* Section Titles */
+    section { padding: 80px 0; }
+    section h2 { text-align: center; font-size: 32px; margin-bottom: 50px; }
+
+    /* Featured Videos */
+    .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .video-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .video-card:hover { transform: translateY(-5px); }
+    .video-card img { width: 100%; }
+    .video-card .content { padding: 15px; }
+    .video-card .content h3 { font-size: 18px; margin-bottom: 10px; }
+    .video-card .content p { font-size: 14px; color: #555; }
+
+    /* Resource Grid */
+    .resources { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .resource-card { background: #f7f7f7; padding: 20px; border-radius: 8px; text-align: center; transition: transform 0.3s, background 0.3s; }
+    .resource-card:hover { transform: translateY(-5px); background: #e1f0ff; }
+    .resource-card a { display: block; margin-top: 10px; color: #3498db; font-weight: 600; }
+
+    /* Teachers */
+    .teachers { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .teacher-card { background: #fff; border-radius: 8px; overflow: hidden; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .teacher-card:hover { transform: translateY(-5px); }
+    .teacher-card img { width: 100%; height: 220px; object-fit: cover; }
+    .teacher-card h3 { margin: 15px 0 5px 0; }
+    .teacher-card p { font-size: 14px; color: #555; margin-bottom: 10px; }
+    .teacher-card button { margin-bottom: 15px; padding: 8px 15px; background: #3498db; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+    .teacher-card button:hover { background: #2980b9; }
+
+    /* Social Media */
+    .social { display: flex; justify-content: center; gap: 20px; margin: 40px 0 0 0; }
+    .social a { font-size: 24px; color: #333; transition: 0.3s; }
+    .social a:hover { color: #3498db; }
+
+    /* Footer */
+    footer { background: #2c3e50; color: #fff; padding: 40px 20px; text-align: center; }
+    footer a { color: #3498db; }
+    footer p { margin-top: 10px; font-size: 14px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: #fff; position: absolute; top: 60px; left: 0; width: 100%; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+      nav ul.show { display: flex; }
+      .hamburger { display: flex; }
     }
-    .hero::after { content: ""; position: absolute; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.5); }
-    .hero-content { position: relative; z-index: 1; }
-    .hero h1 { font-size: 2.5rem; font-weight: 600; line-height: 1.4; }
-    .btn-primary { transition: transform 0.3s; }
-    .btn-primary:hover { transform: scale(1.05); }
-    .section-title { margin: 60px 0 30px; text-align: center; }
-    .card { transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.3); }
-    .card img { height: 220px; object-fit: cover; border-radius: 8px; }
-    footer { background: #212529; color: #bbb; text-align: center; padding: 20px; margin-top: 40px; }
-    .social-icons a { color: #bbb; margin: 0 10px; transition: 0.3s; }
-    .social-icons a:hover { color: #0d6efd; transform: scale(1.2); }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <!-- Header/Navbar -->
+  <header>
     <div class="container">
-      <a class="navbar-brand fw-bold text-white" href="index.html">S.B.R Square</a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
-          <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li>
-          <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <nav>
+        <div class="logo">S.B.R Square</div>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#teachers">Teachers</a></li>
+          <li><a href="#resources">Library</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>स्कूल र कोचिंग क्लासबाट झनै निराश हुनु भएको छ?<br>चिन्ता नगर्नुहोस्, हामी **100% पास रिजल्ट** ग्यारेन्टी गर्छौं, नत्र तपाईंको पैसा फिर्ता!</h1>
-      <a href="contact.html" class="btn btn-primary btn-lg mt-3">Book a Free Demo</a>
-    </div>
+  <section class="hero" id="home">
+    <h1>शिक्षा र मार्गदर्शन तपाईंको घरमै!</h1>
+    <p>सार्वजनिक शिक्षण, होम ट्यूसन र विस्तृत शैक्षिक सामग्री</p>
+    <button>Book a Free Demo</button>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="container">
-    <div class="section-title">
-      <h2>About S.B.R Square</h2>
-      <p>We provide personalized home tuition from class 10 to Masters. Our expert teachers focus on clarity, practical learning, and guaranteed results.</p>
+  <section id="about">
+    <div class="container">
+      <h2>हाम्रो बारेमा</h2>
+      <p style="text-align:center; max-width:800px; margin:auto;">S.B.R Square ले विद्यार्थीहरूलाई उत्कृष्ट होम ट्यूसन सेवा र शैक्षिक स्रोतहरू उपलब्ध गराउँछ। हाम्रो लक्ष्य शिक्षा सजिलो, रमाइलो र प्रभावकारी बनाउनु हो।</p>
     </div>
   </section>
 
-  <!-- Subjects Section -->
-  <section id="subjects" class="container">
-    <div class="section-title">
-      <h2>Subjects We Teach</h2>
-    </div>
-    <div class="row text-center g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=800&q=80" alt="Mathematics">
-          <div class="card-body">
-            <h5>Mathematics</h5>
-            <p>Step-by-step explanations and problem-solving skills for confident learning.</p>
+  <!-- Featured Videos Section -->
+  <section id="videos">
+    <div class="container">
+      <h2>Featured Videos</h2>
+      <div class="videos">
+        <div class="video-card">
+          <img src="https://source.unsplash.com/400x225/?video,education" alt="Video Thumbnail">
+          <div class="content">
+            <h3>Mathematics Basics</h3>
+            <p>Quick tips and tricks for understanding basic mathematics concepts.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="English">
-          <div class="card-body">
-            <h5>English</h5>
-            <p>Enhance grammar, vocabulary, and communication skills effectively.</p>
+        <div class="video-card">
+          <img src="https://source.unsplash.com/400x225/?learning,students" alt="Video Thumbnail">
+          <div class="content">
+            <h3>Science Experiments</h3>
+            <p>Simple and fun experiments you can do at home to learn science.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Science">
-          <div class="card-body">
-            <h5>Science</h5>
-            <p>Learn concepts through practical examples and real-life applications.</p>
+        <div class="video-card">
+          <img src="https://source.unsplash.com/400x225/?classroom,teacher" alt="Video Thumbnail">
+          <div class="content">
+            <h3>English Grammar Tips</h3>
+            <p>Practical tips to improve your English grammar skills quickly.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Teachers Preview Section -->
-  <section id="teachers-preview" class="container mt-5">
-    <div class="section-title">
+  <!-- Resources Section -->
+  <section id="resources" style="background:#f4f6f8;">
+    <div class="container">
+      <h2>Learning Resources</h2>
+      <div class="resources">
+        <div class="resource-card">
+          <h3>Math Notes</h3>
+          <a href="#">Download PDF</a>
+        </div>
+        <div class="resource-card">
+          <h3>Science Notes</h3>
+          <a href="#">Download PDF</a>
+        </div>
+        <div class="resource-card">
+          <h3>English Notes</h3>
+          <a href="#">Download PDF</a>
+        </div>
+        <div class="resource-card">
+          <h3>Social Studies Notes</h3>
+          <a href="#">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section id="teachers">
+    <div class="container">
       <h2>Meet Our Teachers</h2>
-      <p>Our expert team ensures students achieve their best.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card teacher-card shadow-sm">
-          <img src="https://www.facebook.com/share/1K36cWq8M9/" alt="Binil Ranjit">
-          <div class="card-body text-center">
-            <h5>Binil Ranjit</h5>
-            <p>Mathematics, Accounts, Finance (10 to Masters)</p>
-          </div>
+      <div class="teachers">
+        <!-- Example: Repeat for 27 teachers -->
+        <div class="teacher-card">
+          <img src="https://source.unsplash.com/220x220/?teacher,portrait" alt="Teacher Image">
+          <h3>Teacher Name 1</h3>
+          <p>Mathematics | Grade 6-10</p>
+          <button>View All Teachers</button>
         </div>
+        <div class="teacher-card">
+          <img src="https://source.unsplash.com/220x220/?teacher,portrait" alt="Teacher Image">
+          <h3>Teacher Name 2</h3>
+          <p>Science | Grade 6-10</p>
+          <button>View All Teachers</button>
+        </div>
+        <!-- Add remaining 25 teachers similarly -->
       </div>
-      <!-- Add few more featured teachers here -->
-    </div>
-    <div class="text-center mt-3">
-      <a href="teachers.html" class="btn btn-primary">View All Teachers</a>
     </div>
   </section>
 
-  <!-- Contact Info Section -->
-  <section id="contact" class="container mt-5 mb-5">
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Reach out for personalized tuition and demo classes.</p>
+  <!-- Social Media Links -->
+  <section>
+    <div class="container">
+      <div class="social">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">YouTube</a>
+        <a href="#" target="_blank">WhatsApp</a>
+        <a href="#" target="_blank">TikTok</a>
+      </div>
     </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-md-6">
-        <p><strong>Email:</strong> <a href="mailto:binilranjit@gmail.com">binilranjit@gmail.com</a></p>
-        <p><strong>Phone:</strong> +977-9704643826</p>
-        <p><strong>Promod Ghimire:</strong> 9851072574</p>
-        <div class="social-icons mt-3">
-          <a href="https://www.facebook.com/share/1GE8umsjux/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://youtube.com/@a_and_b_tunes" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="https://wa.me/qr/6CHHPR
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <p>S.B.R Square | Email: info@sbrsquare.com | Phone: +977-9800000000</p>
+      <p>© 2025 S.B.R Square. All Rights Reserved.</p>
+      <p>
+        <a href="#home">Home</a> | 
+        <a href="#about">About</a> | 
+        <a href="#teachers">Teachers</a> | 
+        <a href="#resources">Library</a> | 
+        <a href="#videos">Videos</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

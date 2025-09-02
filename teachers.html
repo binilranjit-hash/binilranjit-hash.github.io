@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Teachers - S.B.R Square</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Poppins', sans-serif;
-    }
-    .section-title {
-      margin: 40px 0 20px;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1.8rem;
-      color: #2c3e50;
-    }
-    .teacher-card {
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      overflow: hidden;
-    }
-    .teacher-card:hover {
-      transform: translateY(-6px);
-    }
-    .teacher-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .teacher-info {
-      padding: 15px;
-    }
-    .teacher-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-      color: #2c3e50;
-    }
-    .teacher-subject {
-      font-size: 0.95rem;
-      color: #555;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Teachers - S.B.R Square</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #2c3e50;
+  }
+  .teacher-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+    overflow: hidden;
+  }
+  .teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  }
+  .teacher-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .card-body {
+    text-align: center;
+    padding: 15px;
+  }
+  .teacher-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  .teacher-subject {
+    font-size: 0.95rem;
+    color: #555;
+  }
+</style>
 </head>
 <body>
 
@@ -57,7 +59,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?teacher,math&sig=1" alt="Deepak Khanal">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Deepak Khanal</div>
           <div class="teacher-subject">Mathematics (Grades 10–Masters)</div>
         </div>
@@ -66,7 +68,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?teacher,math&sig=2" alt="Maheshwor Nepal">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Maheshwor Nepal</div>
           <div class="teacher-subject">Mathematics (Grades 10–Masters)</div>
         </div>
@@ -75,7 +77,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?teacher,finance&sig=3" alt="Binil Ranjit">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Binil Ranjit</div>
           <div class="teacher-subject">Mathematics, Accounts, Finance (Grades 10–Masters)</div>
         </div>
@@ -84,7 +86,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?teacher,finance&sig=4" alt="Rina Shahi">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Rina Shahi</div>
           <div class="teacher-subject">Mathematics, Accounts, Finance (Grades 10–Masters)</div>
         </div>
@@ -93,7 +95,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?teacher,economics&sig=5" alt="Ashok Thapa Magar">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Ashok Thapa Magar</div>
           <div class="teacher-subject">Mathematics and Economics (Grades 10–Masters)</div>
         </div>
@@ -107,7 +109,7 @@
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
         <img src="https://source.unsplash.com/400x300/?science,teacher&sig=6" alt="Pramod Ghimire">
-        <div class="teacher-info">
+        <div class="card-body">
           <div class="teacher-name">Pramod Ghimire</div>
           <div class="teacher-subject">Science, Statistics (Grades 10–Masters)</div>
         </div>
@@ -115,8 +117,8 @@
     </div>
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
-        <img src="https://source.unsplash.com/400x300/?teacher,economics&sig=7" alt="Netesh Upadhyaye">
-        <div class="teacher-info">
+        <img src="https://source.unsplash.com/400x300/?science,teacher&sig=7" alt="Netesh Upadhyaye">
+        <div class="card-body">
           <div class="teacher-name">Netesh Upadhyaye</div>
           <div class="teacher-subject">Science and Economics (Grades 10–Masters)</div>
         </div>
@@ -124,8 +126,8 @@
     </div>
     <div class="col-md-4 col-sm-6">
       <div class="teacher-card">
-        <img src="https://source.unsplash.com/400x300/?teacher,biology&sig=8" alt="Man Singh Tharu">
-        <div class="teacher-info">
+        <img src="https://source.unsplash.com/400x300/?science,teacher&sig=8" alt="Man Singh Tharu">
+        <div class="card-body">
           <div class="teacher-name">Man Singh Tharu</div>
           <div class="teacher-subject">Science (Grades 10–Masters)</div>
         </div>
@@ -136,43 +138,224 @@
   <!-- Physics -->
   <h2 class="section-title">⚛️ Physics</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 9-11 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?physics,teacher&sig=9" alt="Sagar Chapagain">
+        <div class="card-body">
+          <div class="teacher-name">Sagar Chapagain</div>
+          <div class="teacher-subject">Physics (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?physics,teacher&sig=10" alt="R.C. Pandey">
+        <div class="card-body">
+          <div class="teacher-name">R.C. Pandey</div>
+          <div class="teacher-subject">Physics (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?physics,computer&sig=11" alt="Bijay Neupane">
+        <div class="card-body">
+          <div class="teacher-name">Bijay Neupane</div>
+          <div class="teacher-subject">Physics and Computer (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Chemistry -->
   <h2 class="section-title">🧪 Chemistry</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 12-13 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?chemistry,teacher&sig=12" alt="Saurav Adhikari">
+        <div class="card-body">
+          <div class="teacher-name">Saurav Adhikari</div>
+          <div class="teacher-subject">Chemistry (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?chemistry,teacher&sig=13" alt="Ramesh Shastri">
+        <div class="card-body">
+          <div class="teacher-name">Ramesh Shastri</div>
+          <div class="teacher-subject">Chemistry (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Biology -->
   <h2 class="section-title">🧬 Biology</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 14-15 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?biology,teacher&sig=14" alt="Ritesh Shah">
+        <div class="card-body">
+          <div class="teacher-name">Ritesh Shah</div>
+          <div class="teacher-subject">Biology, Microbiology (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?biology,teacher&sig=15" alt="Purpsotam Chapagain">
+        <div class="card-body">
+          <div class="teacher-name">Purpsotam Chapagain</div>
+          <div class="teacher-subject">Biology, Agriculture (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Computer Science / IT -->
   <h2 class="section-title">💻 Computer Science / IT</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 16-19 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?computer,teacher&sig=16" alt="Ashwin Pandey">
+        <div class="card-body">
+          <div class="teacher-name">Ashwin Pandey</div>
+          <div class="teacher-subject">Computer (Grades 10–12)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?computer,teacher&sig=17" alt="Sanjan Giri">
+        <div class="card-body">
+          <div class="teacher-name">Sanjan Giri</div>
+          <div class="teacher-subject">Computer (Grades 10–12)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?computer,teacher&sig=18" alt="Ramhari Thapa">
+        <div class="card-body">
+          <div class="teacher-name">Ramhari Thapa</div>
+          <div class="teacher-subject">Computer (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?computer,teacher&sig=19" alt="Mahesh Shrestha">
+        <div class="card-body">
+          <div class="teacher-name">Mahesh Shrestha</div>
+          <div class="teacher-subject">Computer (Grades 10–12)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- English / Languages -->
-  <h2 class="section-title">📖 English / Languages</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 20-25 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=20" alt="Kajol Das">
+        <div class="card-body">
+          <div class="teacher-name">Kajol Das</div>
+          <div class="teacher-subject">English Language Instructor (Grades 10–Masters, IELTS)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=21" alt="Anju Tamang">
+        <div class="card-body">
+          <div class="teacher-name">Anju Tamang</div>
+          <div class="teacher-subject">Japanese & English Language Instructor (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=22" alt="Keshab Phuyal">
+        <div class="card-body">
+          <div class="teacher-name">Keshab Phuyal</div>
+          <div class="teacher-subject">English (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=23" alt="Matrika Niraula">
+        <div class="card-body">
+          <div class="teacher-name">Matrika Niraula</div>
+          <div class="teacher-subject">English (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=24" alt="Rajan Pathak">
+        <div class="card-body">
+          <div class="teacher-name">Rajan Pathak</div>
+          <div class="teacher-subject">English (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?english,teacher&sig=25" alt="Prabal Shrestha">
+        <div class="card-body">
+          <div class="teacher-name">Prabal Shrestha</div>
+          <div class="teacher-subject">English (Grades 10–12)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Nepali -->
   <h2 class="section-title">📚 Nepali</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 26 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?nepali,teacher&sig=26" alt="Preeti Adhikari">
+        <div class="card-body">
+          <div class="teacher-name">Preeti Adhikari</div>
+          <div class="teacher-subject">Nepali (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Social Studies / Law -->
   <h2 class="section-title">🌍 Social Studies / Law</h2>
   <div class="row g-4">
-    <!-- repeat pattern for 27-29 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?social,teacher&sig=27" alt="Advocate Khagendra Mani Ghimire">
+        <div class="card-body">
+          <div class="teacher-name">Advocate Khagendra Mani Ghimire</div>
+          <div class="teacher-subject">Social Studies (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?social,teacher&sig=28" alt="Fadindra Bhattarai">
+        <div class="card-body">
+          <div class="teacher-name">Fadindra Bhattarai</div>
+          <div class="teacher-subject">Social Studies (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="teacher-card">
+        <img src="https://source.unsplash.com/400x300/?law,teacher&sig=29" alt="Pradip Sedhai">
+        <div class="card-body">
+          <div class="teacher-name">Pradip Sedhai</div>
+          <div class="teacher-subject">Social Studies, TU Gold Medalist (Grades 10–Masters)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
